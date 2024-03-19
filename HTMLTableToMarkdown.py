@@ -39,6 +39,9 @@ if __name__ == '__main__':
 
     # extract the first table (which contains the weight data)
     first_table = tables[0]
+    # Remove NaN entries
+    first_table = first_table.fillna('')
+
 
     # Get the table columns that exist
     cols = list(first_table.columns.values)
